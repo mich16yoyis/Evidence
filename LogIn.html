@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+    <link rel="stylesheet" href="/Users/mich/Documents/LogIn/LogIn.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Sign In</h1>
+        <form id="login-form">
+            <label for="username">User</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Log In</button>
+        </form>
+        <p id="error-message"></p>
+    </div>
+
+    <script>
+
+        const form = document.getElementById('login-form');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+
+            if (username === 'yoyis' && password === 'pass') {
+
+                console.log('yeah');
+            } else {
+                console.log('Try again');
+            }
+        });
+
+    </script>
+</body>
+
+</html>
